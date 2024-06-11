@@ -18,8 +18,8 @@ The main goal is to analyze the dataset and build a predictive model that can de
 - portfolio.json
 
 -Templates
-- index.html
-- 
+-index.html
+
 - app.py: Flask application
 - train_classifier.py: Model training script
 
