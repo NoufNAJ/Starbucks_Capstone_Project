@@ -20,14 +20,34 @@ The main goal is to analyze the dataset and build a predictive model that can de
 -Templates
 -index.html
 
-- app.py: Flask application
-- train_classifier.py: Model training script
+-app.py: Flask application
+-train_classifier.py: Model training script
 
-- Starbucks_Capstone_Project.ipynb: Jupyter Notebook with project code
-- Starbucks_Capstone_Project.pdf: Detailed project report
+-Starbucks_Capstone_Project.ipynb: Jupyter Notebook with project code
+-Starbucks_Capstone_Project.pdf: Detailed project report
 
-- scaler.pkl: Scaler file
-- model.pkl: Model file (not included due to large size)
+-scaler.pkl: Scaler file
+-model.pkl: Model file (not included due to large size)
+
+# Installations
+This project is developed using Python and Jupyter Notebook on Anaconda. The necessary Python packages for this project are:
+- pandas
+- numpy
+- math
+- json
+- %matplotlib inline
+- plotly.express
+- plotly.graph_objects
+- plotly.subplots
+- sklearn.model_selection
+- GridSearchCV
+- train_test_split
+- sklearn.preprocessing
+- StandardScaler
+- ColumnTransformer
+- sklearn.ensemble
+- RandomForestClassifier
+- sklearn.metrics
 
 # Licensing, Authors, Acknowledgements
 Data for this project was provided by Udacity.
