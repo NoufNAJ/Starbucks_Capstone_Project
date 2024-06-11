@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        input[type="number"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        input[type="submit"] {
+            background: #5cb85c;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter Features for Prediction</h1>
+    <form action="{{ url_for('predict') }}" method="post">
+        <label for="gender">Gender (0 for Female, 1 for Male):</label>
+        <input type="number" id="gender" name="gender" required><br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br>
+        <label for="income">Income:</label>
+        <input type="number" id="income" name="income" required><br>
+        <label for="time">Time:</label>
+        <input type="number" id="time" name="time" required><br>
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" required><br>
+        <label for="reward">Reward:</label>
+        <input type="number" id="reward" name="reward" required><br>
+        <label for="difficulty">Difficulty:</label>
+        <input type="number" id="difficulty" name="difficulty" required><br>
+        <label for="duration">Duration:</label>
+        <input type="number" id="duration" name="duration" required><br>
+        <label for="email">Email (0 for No, 1 for Yes):</label>
+        <input type="number" id="email" name="email" required><br>
+        <label for="mobile">Mobile (0 for No, 1 for Yes):</label>
+        <input type="number" id="mobile" name="mobile" required><br>
+        <label for="social">Social (0 for No, 1 for Yes):</label>
+        <input type="number" id="social" name="social" required><br>
+        <label for="web">Web (0 for No, 1 for Yes):</label>
+        <input type="number" id="web" name="web" required><br>
+        <label for="offer_type_bogo">Offer Type BOGO (0 for No, 1 for Yes):</label>
+        <input type="number" id="offer_type_bogo" name="offer_type_bogo" required><br>
+        <label for="offer_type_discount">Offer Type Discount (0 for No, 1 for Yes):</label>
+        <input type="number" id="offer_type_discount" name="offer_type_discount" required><br>
+        <label for="offer_type_informational">Offer Type Informational (0 for No, 1 for Yes):</label>
+        <input type="number" id="offer_type_informational" name="offer_type_informational" required><br>
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction_text %}
+        <h2>{{ prediction_text }}</h2>
+    {% endif %}
+</body>
+</html>
